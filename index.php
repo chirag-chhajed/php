@@ -1,36 +1,56 @@
 <?php
-    // string
-    $name = "Chirag";
-    $food = "pizza";
-    $email = "fake@email.com";
+$grade = "A";
+// Why do we use switch statements?
+// We use switch statements instead of if statements when we have a limited number of options
+    switch ($grade) {
+        case "A":
+            echo "You are a superstar!";
+            break;
+        case "B":
+            echo "You did well!";
+            break;
+        case "C":
+            echo "You did okay";
+            break;
+        case "D":
+            echo "You did poorly";
+            break;
+        case "F":
+            echo "YOU FAIL!";
+            break;
+        default:
+            echo "Invalid grade";
+            break;
+    }
 
-    // integers
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
+    $date = date('l');
+    // $date = "g";
 
-    // float
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
+    switch($date){
+        case "Monday":
+            echo "I hate Monday";
+            break;
+        case "Tuesday":
+            echo "It's taco Tuesday";
+            break;
+        case "Wednesday":
+            echo "The work week is half over";
+            break;
+        case "Thursday":
+            echo "It's almost Friday";
+            break;
+        case "Friday":
+            echo "TGIF";
+            break;
+        case "Saturday":
+            echo "It's the weekend";
+            break;
+        case "Sunday":
+            echo "Sunday Funday";
+            break;
+        default:
+            echo "{$date} is not a valid day";
+            break;
+    }
 
-    // boolean
-    $employed = true;
-    $online = false;
-    $for_sale = true;
 
-    echo "Hello, {$name}<br>";
-    echo "You like {$food}<br>";
-    echo "Your email is {$email}<br>";
-
-    echo "You are {$age} years old<br>";
-    echo "There have {$users} users online<br>";
-    echo "You would like to buy {$quantity} items<br>";
-
-    echo "Your gpa is: {$gpa}<br>";
-    echo "Your pizza is \${$price}<br>";
-    echo "The sales is tax rate is {$tax_rate}%<br>";
-
-    echo "Are you employed? {$employed}<br>";
-    echo "Are you online? {$online}<br>";
-?>
