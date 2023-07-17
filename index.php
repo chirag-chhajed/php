@@ -1,36 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <label for="">x</label>
+        <input type="text" name="x" autocomplete="off" id="">
+        <label for="">y</label>
+        <input type="text" name="y" autocomplete="off" id="">
+        <label for="z">z</label>
+        <input type="text" autocomplete="off" name="z">
+        <input type="submit" value="total">
+    </form>
+</body>
+
+</html>
 <?php
-    // string
-    $name = "Chirag";
-    $food = "pizza";
-    $email = "fake@email.com";
+$x = $_POST["x"];
+$total = null;
+$y = $_POST["y"];
+$z = $_POST["z"];
 
-    // integers
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
+// $total = abs($x);
+// $total = round($x);
+// $total = floor($x);
+// $total = ceil($x);
+// $total = pow($x, $y);
+// $total = sqrt($x);
+// $total = max($x, $y, $z);
+// $total = min($x, $y, $z);
+    // $total = pi();
+    $total = rand(1,100);
 
-    // float
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
 
-    // boolean
-    $employed = true;
-    $online = false;
-    $for_sale = true;
-
-    echo "Hello, {$name}<br>";
-    echo "You like {$food}<br>";
-    echo "Your email is {$email}<br>";
-
-    echo "You are {$age} years old<br>";
-    echo "There have {$users} users online<br>";
-    echo "You would like to buy {$quantity} items<br>";
-
-    echo "Your gpa is: {$gpa}<br>";
-    echo "Your pizza is \${$price}<br>";
-    echo "The sales is tax rate is {$tax_rate}%<br>";
-
-    echo "Are you employed? {$employed}<br>";
-    echo "Are you online? {$online}<br>";
+echo $total;
 ?>
