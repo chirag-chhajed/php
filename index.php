@@ -1,36 +1,41 @@
 <?php
-    // string
-    $name = "Chirag";
-    $food = "pizza";
-    $email = "fake@email.com";
+    $username = "Bro Code";
+    $phone = "123-456-7890";
+    $username = strtolower($username);
+    echo $username;
+    echo "<br>";
 
-    // integers
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
+    $username = strtoupper($username);
+    echo $username;
+    echo "<br>";
 
-    // float
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
+    // $username = str_pad($username, 20, "*");
+    // echo $username;
+    // echo "<br>";
 
-    // boolean
-    $employed = true;
-    $online = false;
-    $for_sale = true;
+    $phone = str_replace("-", "", $phone);
+    echo $phone;
+    echo "<br>";
 
-    echo "Hello, {$name}<br>";
-    echo "You like {$food}<br>";
-    echo "Your email is {$email}<br>";
+    $username = str_shuffle($username);
+    echo $username;
+    echo "<br>";
 
-    echo "You are {$age} years old<br>";
-    echo "There have {$users} users online<br>";
-    echo "You would like to buy {$quantity} items<br>";
+    $equals = strcmp($username, "bro code");
+    echo $equals;
+    echo "<br>";
 
-    echo "Your gpa is: {$gpa}<br>";
-    echo "Your pizza is \${$price}<br>";
-    echo "The sales is tax rate is {$tax_rate}%<br>";
+    $count = strlen($username);
+    echo $count;
+    echo "<br>";
 
-    echo "Are you employed? {$employed}<br>";
-    echo "Are you online? {$online}<br>";
-?>
+    $index = strpos($username,"o");
+    echo $index;
+    echo "<br>";
+
+    //Q: explode in php is similar to split() in javascript?
+    //A: Yes, it is.
+    //Q: implode in php is similar to join() in javascript?
+    //A: Yes, it is.
+
+
