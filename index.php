@@ -1,36 +1,41 @@
+<!-- 
+get and post in php
+get is used to get data from url
+post is used to get data from form
+$_GET and $_POST are super global variables
+super global variables are those variables which are available in all scopes -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <label for="">Username:</label><br>
+        <input type="text" name="username"><br>
+        <label for="">Password:</label><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="login"><br>
+    </form>
+</body>
+
+</html>
 <?php
-    // string
-    $name = "Chirag";
-    $food = "pizza";
-    $email = "fake@email.com";
+// for get method
+    // echo "{$_GET["username"]} <br>";
+    // echo "{$_GET["password"]} <br>";
+// for post method
+    echo "{$_POST["username"]} <br>";
+    echo "{$_POST["password"]} <br>";
 
-    // integers
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
+// post is more secure than get
+// get is used to get data from url, not secure, char limit, bookmark is possible with values, can be cached, better for a search page
+// post is used to get data from form, secure, no data limit, bookmark is not possible with values, can't be cached, better for submittin credentials
 
-    // float
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
-
-    // boolean
-    $employed = true;
-    $online = false;
-    $for_sale = true;
-
-    echo "Hello, {$name}<br>";
-    echo "You like {$food}<br>";
-    echo "Your email is {$email}<br>";
-
-    echo "You are {$age} years old<br>";
-    echo "There have {$users} users online<br>";
-    echo "You would like to buy {$quantity} items<br>";
-
-    echo "Your gpa is: {$gpa}<br>";
-    echo "Your pizza is \${$price}<br>";
-    echo "The sales is tax rate is {$tax_rate}%<br>";
-
-    echo "Are you employed? {$employed}<br>";
-    echo "Are you online? {$online}<br>";
+// if security matters, use post
 ?>
