@@ -1,36 +1,21 @@
 <?php
-    // string
-    $name = "Chirag";
-    $food = "pizza";
-    $email = "fake@email.com";
+//What are Logical Operators?
+//Logical operators are used to combine conditional statements.
+//PHP supports the following logical operators:
+//&& True if both conditions are true
+//|| True if either condition is true
+// !  True if condition is false
 
-    // integers
-    $age = 21;
-    $users = 2;
-    $quantity = 3;
+$temp = 25;
+$cloudy = true;
 
-    // float
-    $gpa = 2.5;
-    $price = 4.99;
-    $tax_rate = 5.1;
-
-    // boolean
-    $employed = true;
-    $online = false;
-    $for_sale = true;
-
-    echo "Hello, {$name}<br>";
-    echo "You like {$food}<br>";
-    echo "Your email is {$email}<br>";
-
-    echo "You are {$age} years old<br>";
-    echo "There have {$users} users online<br>";
-    echo "You would like to buy {$quantity} items<br>";
-
-    echo "Your gpa is: {$gpa}<br>";
-    echo "Your pizza is \${$price}<br>";
-    echo "The sales is tax rate is {$tax_rate}%<br>";
-
-    echo "Are you employed? {$employed}<br>";
-    echo "Are you online? {$online}<br>";
-?>
+if ($temp >= 0 && $temp <= 30) {
+    echo "The weather is good<br>";
+} else {
+    echo "The weather is bad<br>";
+}
+if (!$cloudy) {
+    echo "It is sunny<br>";
+} else {
+    echo "It is cloudy";
+}
